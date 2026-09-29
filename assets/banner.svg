@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: url(#titleGrad);
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .grid-line {
+      stroke: #334155;
+      stroke-width: 0.5;
+      stroke-dasharray: 4 4;
+      opacity: 0.4;
+    }
+    .pulse-circle {
+      animation: pulse 3s infinite alternate ease-in-out;
+    }
+    .scan-line {
+      animation: scan 4s infinite linear;
+    }
+    @keyframes pulse {
+      0% { r: 140px; opacity: 0.15; }
+      100% { r: 170px; opacity: 0.35; }
+    }
+    @keyframes scan {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      50% { transform: translateY(300px); opacity: 0.8; }
+      100% { transform: translateY(0px); opacity: 0.2; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Grid Patterns in background -->
+  <g opacity="0.6">
+    <line x1="100" y1="0" x2="100" y2="300" class="grid-line" />
+    <line x1="300" y1="0" x2="300" y2="300" class="grid-line" />
+    <line x1="500" y1="0" x2="500" y2="300" class="grid-line" />
+    <line x1="700" y1="0" x2="700" y2="300" class="grid-line" />
+    <line x1="900" y1="0" x2="900" y2="300" class="grid-line" />
+    <line x1="1100" y1="0" x2="1100" y2="300" class="grid-line" />
+
+    <line x1="0" y1="60" x2="1200" y2="60" class="grid-line" />
+    <line x1="0" y1="120" x2="1200" y2="120" class="grid-line" />
+    <line x1="0" y1="180" x2="1200" y2="180" class="grid-line" />
+    <line x1="0" y1="240" x2="1200" y2="240" class="grid-line" />
+  </g>
+
+  <!-- Dynamic Glowing Background Elements (Behind text) -->
+  <circle cx="1000" cy="150" r="150" class="pulse-circle" fill="#6366f1" filter="url(#glow)" />
+  <circle cx="150" cy="80" r="100" class="pulse-circle" fill="#0284c7" filter="url(#glow)" />
+
+  <!-- Scanning Graphic Element (Right side) -->
+  <g transform="translate(950, 75)">
+    <!-- Shield Outline -->
+    <path d="M 50 10 L 90 30 V 80 C 90 120 50 145 50 145 C 50 145 10 120 10 80 V 30 Z" fill="url(#shieldGrad)" stroke="#38bdf8" stroke-width="2" />
+    <!-- Lock / Key icon inside shield -->
+    <rect x="38" y="70" width="24" height="20" rx="3" fill="#38bdf8" />
+    <path d="M 43 70 V 58 A 7 7 0 0 1 57 58 V 70" fill="none" stroke="#38bdf8" stroke-width="3" />
+  </g>
+
+  <!-- Foreground Content (Text & Badges safely in foreground) -->
+  <g transform="translate(60, 0)">
+    <!-- Top Pill / Tag -->
+    <g transform="translate(0, 48)">
+      <rect width="210" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      <text x="15" y="19" class="badge-text" fill="#38bdf8">🛡️ CLOUD SECURITY ARCHITECTURE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="122" class="title" filter="url(#glow)">Awesome Cloud Data Loss Prevention</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="162" class="subtitle">Curated SaaS Platforms, Enterprise Solutions & Open-Source Security Tools</text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 195)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1" />
+        <text x="14" y="21" class="badge-text">🔍 PII & Secret Discovery</text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(195, 0)">
+        <rect width="180" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1" />
+        <text x="14" y="21" class="badge-text">⚡ CI/CD Secret Gating</text>
+      </g>
+
+      <!-- Pill 3 -->
+      <g transform="translate(390, 0)">
+        <rect width="185" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1" />
+        <text x="14" y="21" class="badge-text">🤖 AI Guardrails & LLM DLP</text>
+      </g>
+
+      <!-- Pill 4 -->
+      <g transform="translate(590, 0)">
+        <rect width="175" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1" />
+        <text x="14" y="21" class="badge-text">🌐 K8s & Mesh Scanning</text>
+      </g>
+    </g>
+
+    <!-- Footer note -->
+    <text x="0" y="262" font-family="sans-serif" font-size="12" fill="#64748b">Updated 2026 • Curated for Security Engineers & AppSec Teams</text>
+  </g>
+</svg>
