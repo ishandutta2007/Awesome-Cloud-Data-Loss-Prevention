@@ -60,7 +60,7 @@ The table below compares top enterprise cloud DLP solutions, sorted in descendin
 
 ## 🔓 Open-Source GitHub Projects
 
-Cloud DLP is compositionally built in open-source. Below are active open-source repositories sorted by GitHub Stars_Counts in descending order.
+Cloud DLP is compositionally built in open-source. Below are active open-source repositories sorted by GitHub_Stars_Counts in descending order.
 
 ### 🔑 Secrets Scanning & CI/CD Gating
 
