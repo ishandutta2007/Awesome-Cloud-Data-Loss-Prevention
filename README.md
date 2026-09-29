@@ -1,263 +1,150 @@
-# Awesome-Cloud-Data-Loss-Prevention
+# 🛡️ Awesome Cloud Data Loss Prevention (DLP) Ecosystem
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Data-Loss-Prevention">
+    <img src="assets/banner.svg" alt="Awesome Cloud Data Loss Prevention Banner" width="100%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Data-Loss-Prevention"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Data-Loss-Prevention?style=social" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Data-Loss-Prevention/stargazers"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-Data-Loss-Prevention?style=social" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-## Top Cloud Data Loss Prevention (DLP) Platforms Ecosystem
+---
 
+## 📌 Executive Summary & Market Insights
 
+> 💡 **Market Size & Structure**: The global Data Loss Prevention (DLP) market is valued at approximately **$42.87 Billion in 2026** and is projected to reach **$111 Billion by 2031** (CAGR ~21%). The sector is **moderately fragmented**: enterprise suite leaders (Google Cloud, Microsoft, Broadcom/Symantec) dominate infrastructure-native and full-stack security deployments, while agile startups and specialized open-source scanners capture growing niches in secrets scanning, Kubernetes security, and AI/LLM prompt guardrails.
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**
+This curated list tracks notable **SaaS platforms** and **open-source projects** for **Cloud Data Loss Prevention (DLP)**, sensitive data discovery, secrets scanning, PII redaction, policy enforcement, and regulatory compliance monitoring across cloud workloads, endpoints, and CI/CD pipelines.
 
-*Focused on Sensitive Data Discovery, Exfiltration Prevention, Policy Enforcement & Compliance Monitoring*
+---
 
-**Last updated: September 2026**
+## 📑 Table of Contents
 
+- [☁️ SaaS & Enterprise DLP Platforms](#-saas--enterprise-dlp-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [🔑 Secrets Scanning & CI/CD Gating](#-secrets-scanning--cicd-gating)
+  - [🤖 AI Guardrails & LLM DLP](#-ai-guardrails--llm-dlp)
+  - [🌐 Network, Endpoint & Container DLP](#-network-endpoint--container-dlp)
+  - [📊 Data Governance & Metadata Classification](#-data-governance--metadata-classification)
+  - [📜 Legacy Open-Source DLP (Historical Reference)](#-legacy-open-source-dlp-historical-reference)
+- [📈 Star History](#-star-history)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
 
+---
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Data Loss Prevention (DLP)**. These tools help security teams discover sensitive data, prevent unauthorized exfiltration, enforce data handling policies, and maintain compliance across cloud applications, endpoints, and network traffic.
+## ☁️ SaaS & Enterprise DLP Platforms
 
+The table below compares top enterprise cloud DLP solutions, sorted in descending order by parent company market capitalization or enterprise valuation.
 
+| Platform | Parent / Publisher | Enterprise Size / Market Cap (USD) | Starting Pricing (Specific Tier) | Free Tier / Trial Details | Key Features & Focus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Google Cloud Sensitive Data Protection](https://cloud.google.com/security/products/dlp)** | Alphabet Inc. | ~$4.15 Trillion | $1.00 per GB scanned (Inspection) / $0.03 per GB (Discovery) | 1 GB/month Always Free inspection + $300 (90-day) Google Cloud trial credit | Native GCP API for discovering, classifying, and redacting PII, PHI, and credentials across BigQuery, Cloud Storage, and custom streams. |
+| **[Microsoft Purview DLP](https://www.microsoft.com/en-us/security/business/microsoft-purview)** | Microsoft Corp. | ~$3.78 Trillion | ~$10.00 – $12.00 / user / month (Purview Suite add-on) or $60.00 / user / month (M365 E5) | 30-day Free Trial (up to 25 user licenses) via M365 Admin Center | Deep M365, Exchange, Teams, SharePoint, and Windows endpoint DLP integration with adaptive risk management. |
+| **[Symantec DLP](https://www.broadcom.com/products/cybersecurity/information-security/data-loss-prevention)** | Broadcom Inc. | ~$1.68 Trillion | Custom quote-based (starts ~$35.00 / user / year enterprise tier) | 30-day Enterprise Evaluation upon request via Broadcom Sales | Comprehensive enterprise endpoint, network, and storage discovery with Exact Data Matching (EDM). |
+| **[Proofpoint DLP](https://www.proofpoint.com/)** | Thoma Bravo (Private) | ~$12.30 Billion Valuation | Custom quote-based (starts ~$30.00 / user / year enterprise tier) | Demo & Proof of Concept (PoC) available upon request (no public self-serve trial) | People-centric email, cloud application, and insider threat prevention platform. |
+| **[Netskope DLP](https://www.netskope.com/)** | Netskope Inc. (NASDAQ: NTSK) | ~$7.22 Billion | ~$15.00 / user / month (Full Enterprise Cloud Suite tier) | Hands-on Interactive Test Drive & Guided Sandbox (no unguided self-serve trial) | Cloud-native inline inspection (CASB, SWG, ZTNA) with API-based cloud SaaS monitoring. |
+| **[Forcepoint DLP](https://www.forcepoint.com/)** | Francisco Partners (Private) | ~$2.50 Billion Valuation | Custom quote-based (starts ~$40.00 / user / year enterprise tier) | Guided 14-day Enterprise Proof of Value (PoV) upon sales request | Behavioral analytics & risk-adaptive DLP dynamically tuning policies based on user risk score. |
+| **[Digital Guardian](https://digitalguardian.com/)** | HelpSystems / Fortra (Private) | ~$2.00 Billion Valuation | Custom quote-based (starts ~$50.00 / user / year enterprise tier) | Enterprise Managed PoC / Guided Demo (no public self-serve trial) | Kernel-level endpoint DLP, intellectual property protection, and automated data tagging. |
+| **[Trellix DLP](https://www.trellix.com/)** | Symphony Technology Group (Private) | ~$1.80 Billion Valuation | Custom quote-based (starts ~$32.00 / user / year enterprise tier) | 30-day Enterprise Trial / Guided PoC upon request | Formerly McAfee DLP; endpoint, web, network, and cloud DLP with unified ePO management console. |
+| **[Endpoint Protector](https://www.endpointprotector.com/)** | Netwrix / CoSoSys (Private) | ~$1.00 Billion Valuation | ~$4.00 / endpoint / month (starting subscription tier) | 30-day Free Trial (Full Virtual Appliance / Cloud Instance) | Cross-platform (Windows, macOS, Linux) endpoint DLP and USB removable media control. |
 
-**Examples** include Microsoft Purview DLP, Netskope DLP, Symantec DLP, Forcepoint DLP, Proofpoint DLP, Google Cloud DLP, Digital Guardian, Trellix DLP, Endpoint Protector, and CoSoSys (the category leaders).
+---
 
+## 🔓 Open-Source GitHub Projects
 
+Cloud DLP is compositionally built in open-source. Below are active open-source repositories sorted by GitHub star counts in descending order.
 
-**Open-source emphasis**: Cloud DLP is one of the **most challenging categories for open-source alternatives**. No single open-source tool matches the breadth of commercial enterprise DLP platforms. Instead, open-source DLP is **compositional**—teams combine specialized tools for secrets scanning, PII detection, network monitoring, and content classification. The strongest options are **pleno-dlp** (multi-format secret/PII scanner with SARIF output), **Gitleaks/Betterleaks** (CI/CD secrets gating), **Nightfall's sensitive-data-scanner** (PII/API key discovery at rest), and **NeuVector** (Kubernetes DLP with regex rules). This section documents the full compositional landscape honestly.
+### 🔑 Secrets Scanning & CI/CD Gating
 
+* **[gitleaks/gitleaks](https://github.com/gitleaks/gitleaks)** [![Stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers)  
+  *Industry-standard secret scanner for Git repositories and CI/CD pipelines.* Scans commit history, staged diffs, and local files using regex rules.
+* **[trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog)** [![Stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)  
+  *High-performance secret search engine.* Scans git repos, S3 buckets, filesystems, and APIs for 800+ secret types with active credential verification.
+* **[betterleaks/betterleaks](https://github.com/betterleaks/betterleaks)** [![Stars](https://img.shields.io/github/stars/betterleaks/betterleaks?style=social&color=white)](https://github.com/betterleaks/betterleaks/stargazers)  
+  *Next-generation secrets scanner.* Extends coverage to GitHub/GitLab APIs, Hugging Face, S3-compatible storage, local files, and stdin with active credential validation.
+* **[plenoai/pleno-dlp](https://github.com/plenoai/pleno-dlp)** [![Stars](https://img.shields.io/github/stars/plenoai/pleno-dlp?style=social&color=white)](https://github.com/plenoai/pleno-dlp/stargazers)  
+  *Multi-format secrets & PII scanner with SARIF output.* AGPL-3.0 Go-based engine supporting 800+ patterns, custom JSON rules, base64/hex decode pipelines, and Luhn checksum validation.
+* **[nightfallai/sensitive-data-scanner](https://github.com/nightfallai/sensitive-data-scanner)** [![Stars](https://img.shields.io/github/stars/nightfallai/sensitive-data-scanner?style=social&color=white)](https://github.com/nightfallai/sensitive-data-scanner/stargazers)  
+  *CLI for discovering PII & API keys at rest in file silos and backups using Nightfall APIs.*
 
+### 🤖 AI Guardrails & LLM DLP
 
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
+* **[protectai/llm-guard](https://github.com/protectai/llm-guard)** [![Stars](https://img.shields.io/github/stars/protectai/llm-guard?style=social&color=white)](https://github.com/protectai/llm-guard/stargazers)  
+  *Security toolkit for LLM prompts and responses.* Detects and redacts sensitive data, PII, and prompt injection attacks in AI application flows.
+* **[feras-khatib/agi-sentinel-dlp](https://github.com/feras-khatib/agi-sentinel-dlp)** [![Stars](https://img.shields.io/github/stars/feras-khatib/agi-sentinel-dlp?style=social&color=white)](https://github.com/feras-khatib/agi-sentinel-dlp/stargazers)  
+  *Local-first DLP engine for AI pipelines.* Redacts PII, API keys, and prompt injections in parallel with zero-PII audit logging.
+* **[privacyshield-ai/privacy-firewall](https://github.com/privacyshield-ai/privacy-firewall)** [![Stars](https://img.shields.io/github/stars/privacyshield-ai/privacy-firewall?style=social&color=white)](https://github.com/privacyshield-ai/privacy-firewall/stargazers)  
+  *Local AI-powered privacy firewall.* Inspects outbound data before it reaches AI chatbots or third-party LLM APIs.
+* **[Stanxy/clawguard](https://github.com/Stanxy/clawguard)** [![Stars](https://img.shields.io/github/stars/Stanxy/clawguard?style=social&color=white)](https://github.com/Stanxy/clawguard/stargazers)  
+  *Outbound DLP surveillance layer.* Monitors outbound traffic for 52 secret types and 10 PII patterns with REDACT, BLOCK, MASK, and HASH action policies.
 
+### 🌐 Network, Endpoint & Container DLP
 
+* **[wazuh/wazuh](https://github.com/wazuh/wazuh)** [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)  
+  *Open-source XDR & SIEM platform.* Includes File Integrity Monitoring (FIM) and custom PAN (credit card) regex detection rules.
+* **[Security-Onion-Solutions/securityonion](https://github.com/Security-Onion-Solutions/securityonion)** [![Stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)  
+  *Network Security Monitoring platform.* Extracts transferred files from network traffic using Suricata and Zeek for forensic DLP analysis.
+* **[neuvector/neuvector](https://github.com/neuvector/neuvector)** [![Stars](https://img.shields.io/github/stars/neuvector/neuvector?style=social&color=white)](https://github.com/neuvector/neuvector/stargazers)  
+  *Kubernetes-native container security platform.* Enforces pod-level DLP regex rules in containerized application mesh networks.
 
-## Table of Contents
+### 📊 Data Governance & Metadata Classification
 
+* **[open-metadata/OpenMetadata](https://github.com/open-metadata/OpenMetadata)** [![Stars](https://img.shields.io/github/stars/open-metadata/OpenMetadata?style=social&color=white)](https://github.com/open-metadata/OpenMetadata/stargazers)  
+  *Centralized metadata & data governance platform.* Automated PII classification profiler for databases, data warehouses, and cloud lakes.
+* **[apache/atlas](https://github.com/apache/atlas)** [![Stars](https://img.shields.io/github/stars/apache/atlas?style=social&color=white)](https://github.com/apache/atlas/stargazers)  
+  *Scalable governance and metadata framework.* Data tagging, classification (PII, PHI, PCI), and lineage integration for Hadoop and Spark ecosystems.
 
+### 📜 Legacy Open-Source DLP (Historical Reference)
 
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+* **[MyDLP/MyDLP](https://github.com/MyDLP/MyDLP)** [![Stars](https://img.shields.io/github/stars/MyDLP/MyDLP?style=social&color=white)](https://github.com/MyDLP/MyDLP/stargazers)  
+  *Historically significant open-source endpoint and network DLP.* (Unmaintained since acquisition in 2014).
+* **[OpenDLP/OpenDLP](https://github.com/OpenDLP/OpenDLP)** [![Stars](https://img.shields.io/github/stars/OpenDLP/OpenDLP?style=social&color=white)](https://github.com/OpenDLP/OpenDLP/stargazers)  
+  *First-generation agent-based sensitive data scanner.* (Unmaintained since 2012).
 
-- [Open-Source GitHub Projects](#open-source-github-projects)
+---
 
-- [How to Contribute](#how-to-contribute)
+## 📈 Star History
 
-- [Disclaimer](#disclaimer)
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Cloud-Data-Loss-Prevention&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Cloud-Data-Loss-Prevention&type=date&legend=top-left)
 
+---
 
+## 🤝 How to Contribute
 
-## SaaS/Hosted Platforms
+1. Fork the repository.
+2. Add your tool under the appropriate section in `README.md`.
+3. Ensure description is factual, concise (1-2 sentences), and formatted correctly.
+4. Open a Pull Request!
 
+---
 
+## 💖 Support
 
-- **[Microsoft Purview DLP](https://www.microsoft.com/en-us/security/business/microsoft-purview)**
+Thank you for exploring this repository! If you find this curated Cloud DLP list useful, please consider:
+- ⭐ **Starring** the repo on GitHub to raise visibility.
+- 🔀 **Forking** it to customize for your team's internal AppSec guidelines.
+- 📢 **Sharing** it with security engineers, DevOps specialists, and compliance leaders.
 
-  Integrated DLP across Microsoft 365, Windows endpoints, and cloud apps. Provides content-aware policy enforcement, adaptive protection, and insider risk management. Native integration with Teams, Exchange, SharePoint, and OneDrive.
+☕ **Sponsor & Buy Me a Coffee**: If you'd like to support my open-source work, you can sponsor me on [GitHub Sponsors](https://github.com/sponsors/ishandutta2007)!
 
+---
 
+## ⚠️ Disclaimer
 
-- **[Netskope DLP](https://www.netskope.com/)**
-
-  Cloud-native DLP with API-based inspection for SaaS apps and real-time inline enforcement for web traffic. Deep integration with the Netskope Security Cloud for CASB, SWG, and ZTNA.
-
-
-
-- **[Symantec DLP](https://www.broadcom.com/products/cybersecurity/information-security/data-loss-prevention)**
-
-  Enterprise DLP platform with endpoint, network, and discovery components. Provides comprehensive content inspection, exact data matching (EDM), and incident management workflows.
-
-
-
-- **[Forcepoint DLP](https://www.forcepoint.com/)**
-
-  Human-centric DLP with risk-adaptive protection. Monitors user behavior alongside data movement to distinguish malicious exfiltration from accidental leakage.
-
-
-
-- **[Proofpoint DLP](https://www.proofpoint.com/)**
-
-  Email and cloud DLP integrated with Proofpoint's threat protection platform. Focuses on preventing sensitive data loss via email, cloud apps, and insider threats.
-
-
-
-- **[Google Cloud DLP](https://cloud.google.com/security/products/dlp)**
-
-  Fully managed API for discovering, classifying, and redacting sensitive data (PII, PHI, financial) across GCP services. Supports data profiling, de-identification, and risk analysis at scale.
-
-
-
-- **[Digital Guardian](https://digitalguardian.com/)**
-
-  Data-centric DLP with endpoint, network, and discovery capabilities. Strong in intellectual property protection and regulated data compliance.
-
-
-
-- **[Trellix DLP](https://www.trellix.com/)**
-
-  Enterprise DLP (formerly McAfee DLP) with endpoint, network, and discovery modules. Provides content-aware policy enforcement and incident response.
-
-
-
-- **[Endpoint Protector](https://www.endpointprotector.com/)**
-
-  Multi-OS DLP and device control solution from CoSoSys. Provides content-aware protection for endpoints, email, web, and removable media.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Multi-Format Scanners & CI/CD Gating
-
-
-
-- **[pleno-dlp](https://github.com/plenoai/pleno-dlp)**
-
-  **The most comprehensive open-source DLP scanner.** AGPL-3.0, Go-based. Scans filesystems, stdin, and archives (zip, tar, gzip) for 800+ secret types and PII patterns (SSN, credit cards with Luhn validation, emails, phones). Features **custom JSON rules**, **allowlisting** (by detector type, raw secret, regex, or path glob), **decode pipelines** (base64, hex, percent-encoded), and **verify URLs** for credential validation. Output formats: table, JSON, **SARIF** (GitHub Code Scanning compliant). Install via `go install` or pre-built archives with SBOMs. Ideal for CI/CD secret gating and filesystem scanning .
-
-
-
-- **[Gitleaks](https://github.com/gitleaks/gitleaks)**
-
-  **Industry-standard secrets scanner for repositories and CI workflows.** Now feature-complete; feature development has shifted to **Betterleaks**. Scans Git repos, files, and staged diffs using rule and regex-based detection. Supports pre-commit hooks and GitHub Actions. **MIT License** .
-
-
-
-- **[Betterleaks](https://github.com/betterleaks/betterleaks)**
-
-  **The next-generation secrets scanner** from Gitleaks' maintainers. Extends coverage beyond Git to GitHub/GitLab APIs, Hugging Face, S3-compatible storage, local files, and stdin. Adds **contextual filtering** and **optional active credential validation**. Designed for DevOps teams needing broader source coverage and preventive gating in CI/CD .
-
-
-
-- **[Nightfall sensitive-data-scanner](https://github.com/nightfallai/sensitive-data-scanner)**
-
-  Scans directories, exports, and backups for **PII and API keys** using Nightfall's DLP APIs. Discovers sensitive data at rest in data silos. Nightfall also provides **git-repo-scanner** (GitHub/GitLab repos) and SDKs (Java, Go, Node.js) for building custom DLP integrations .
-
-
-
-### Network & Endpoint Monitoring
-
-
-
-- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)**
-
-  Network security monitoring platform combining Suricata, Zeek, and Elasticsearch for intrusion detection, packet analysis, and threat hunting. **Can extract transferred files from network traffic**, providing network context for DLP investigations. **Not a content-aware DLP platform**—sensitive data classification and policy enforcement are separate functions. Community edition free; Pro license required for enterprise capabilities. Note: uses ELv2 license for some components .
-
-
-
-- **[NeuVector](https://github.com/neuvector/neuvector)**
-
-  Kubernetes-native container security platform with **DLP capabilities**. Can define **DLP regex rules for individual pods**, providing content-aware protection in containerized environments. Open source (SUSE) .
-
-
-
-- **[Wazuh](https://github.com/wazuh/wazuh)**
-
-  SIEM/XDR platform with **File Integrity Monitoring (FIM)** that can detect content changes and document **custom PAN scanning rules** for detecting unmasked payment card numbers. **Not a dedicated content-aware DLP platform**—provides telemetry and compliance monitoring alongside a separate DLP layer .
-
-
-
-### AI-Focused & Local-First DLP
-
-
-
-- **[privacy-firewall](https://github.com/privacyshield-ai/privacy-firewall)**
-
-  **Local AI-powered DLP solution** with 219 stars. Designed to detect and protect sensitive data before it leaves the machine, addressing the growing risk of data leakage to AI chatbots and LLM pipelines .
-
-
-
-- **[clawguard](https://github.com/Stanxy/clawguard)**
-
-  DLP surveillance layer for **OpenClaw**—scans outbound content for secrets, PII, and policy violations before it leaves the machine. Covers **52 secret patterns** (AWS, GCP, Azure, GitHub, GitLab, Stripe, Slack, OpenAI, Anthropic, private keys, database URIs) and **10 PII patterns** (SSN with area code validation, credit cards with Luhn checksum, emails, phones, IPv4/IPv6). Policy engine supports **REDACT, BLOCK, MASK, HASH** actions with destination allowlists and per-destination rules .
-
-
-
-- **[LLM Guard](https://github.com/protectai/llm-guard)**
-
-  Open-source project for **sanitizing PII in application-integrated LLM prompts**. **Archived July 9, 2026**—no longer actively maintained. Previously used to detect and redact sensitive data before it reaches LLMs .
-
-
-
-- **[AGI Sentinel DLP Shield](https://github.com/feras-khatib/agi-sentinel-dlp)**
-
-  Local-first DLP engine for **AI/AGI pipelines**. Detects and redacts PII (emails, credit cards, SSN, passport), API keys (OpenAI, AWS, Google, GitHub, Slack), and AI-specific threats (prompt injection, jailbreak). Features parallel processing, bulk file support (CSV, JSON), secure JSON audit logs with zero PII storage, and Docker deployment. **AGPLv3 licensed** .
-
-
-
-### Data Classification & Governance
-
-
-
-- **[Apache Atlas](https://github.com/apache/atlas)**
-
-  Data governance framework with **classification by tags** and data lineage in Hadoop/Spark ecosystems. Supports predefined types (PII, PHI, PCI) and custom Java rules. Native integration with Apache Ranger for access policy enforcement based on classifications. Ideal for organizations wanting full control over classification pipelines without cloud dependency .
-
-
-
-- **[OpenMetadata](https://github.com/open-metadata/OpenMetadata)**
-
-  Centralized metadata platform with **automatic classification** via configurable profilers for SQL databases, data lakes, and cloud services. **PII classification engine** detects columns containing personal data with **89% accuracy** on common types (names, emails, phones). Collaborative interface allows data stewards to validate and correct classifications via review workflows, improving detection through active learning .
-
-
-
-### Legacy Open-Source DLP (Historical Reference)
-
-
-
-- **[OpenDLP](https://github.com/OpenDLP/OpenDLP)**
-
-  **Historically significant** open-source, agent-based DLP tool for discovering sensitive data at rest across thousands of systems. Deployed agents via SMB/NetBIOS and supported agentless scanning of network filesystems (Windows shares, Unix via SSH). **Abandoned since version 0.5.1 (August 2012)**—lacks modern OS, cloud, and SaaS support. Inadequate for production use but important as one of the first open-source DLP agents .
-
-
-
-- **[MyDLP](https://github.com/MyDLP/MyDLP)**
-
-  Open-source endpoint and network DLP platform monitoring web, email, USB, printers, and screenshots. Community Edition applied log/block rules for sensitive data. **Acquired by Comodo Group in May 2014**; open-source edition **unmaintained since early 2014**. Not suitable for modern enterprise DLP requirements .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Secrets Scanning**: **pleno-dlp** (multi-format, SARIF), **Gitleaks** (repo-focused), **Betterleaks** (broader sources, validation), **TruffleHog** (800+ secret types, verification) .
-
-- **Network Monitoring**: **Security Onion** (packet analysis, file extraction), **Snort** (rule-based IPS for custom DLP rules), **ModSecurity** (WAF for HTTP traffic DLP) .
-
-- **Data Classification**: **Apache Atlas** (Hadoop/Spark lineage), **OpenMetadata** (89% PII accuracy, active learning) .
-
-- **AI/LLM DLP**: **privacy-firewall** (local AI-powered), **clawguard** (outbound scanning with policy engine), **AGI Sentinel** (AI pipeline protection) .
-
-- **Kubernetes DLP**: **NeuVector** (pod-level DLP regex rules) .
-
-
-
-**Frameworks for building custom systems**: Combine **pleno-dlp** for filesystem and CI/CD scanning with SARIF output, **Gitleaks/Betterleaks** for repository secret gating, **Nightfall SDKs** for API-based PII discovery, **NeuVector** for Kubernetes DLP, and **Security Onion** for network-level visibility. Add **Apache Atlas** or **OpenMetadata** for data classification and governance. **Critical gap**: No single open-source tool provides unified policy management, endpoint agents, email/web channel enforcement, and incident workflows equivalent to commercial platforms.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
+- This is a **community-curated** list for educational and technical reference.
 - Cloud DLP platforms handle sensitive data classification and prevention; ensure compliance with GDPR, CCPA, HIPAA, PCI DSS, and relevant data protection regulations.
+- **Open-Source Reality**: No single open-source tool provides a turnkey, full-spectrum replacement for enterprise platforms like Google Cloud SDP, Microsoft Purview, or Netskope. A practical open-source strategy relies on combining specialized scanners (`gitleaks`, `trufflehog`, `pleno-dlp`), container/network monitors (`neuvector`, `securityonion`), and governance engines (`OpenMetadata`).
 
-- **Open-source reality**: **No single open-source tool provides enterprise-grade cloud DLP.** The practical approach is **compositional**—combining specialized tools for secrets scanning (**pleno-dlp**, **Gitleaks/Betterleaks**), network monitoring (**Security Onion**), data classification (**Apache Atlas**, **OpenMetadata**), and Kubernetes DLP (**NeuVector**). This requires significant integration effort and lacks unified policy management . Commercial platforms (Microsoft Purview, Netskope, Symantec, Forcepoint) remain the primary choice for organizations requiring comprehensive, content-aware DLP across all channels.
+---
+
+<p align="center">
+  Curated with ❤️ by <a href="https://github.com/ishandutta2007">Ishan Dutta</a> • Related awesome lists: <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome">Awesome-Awesome-Awesome</a>
+</p>
